@@ -1,0 +1,34 @@
+{
+  "name": "openbackups",
+  "version": "0.1.0",
+  "description": "Open Backups is an open-source lightweight desktop application made by BePi. It allows you to easily manage automatic and recurrent backups for all your files.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder -w -p never",
+    "deploy": "electron-builder -w -p always"
+  },
+  "author": {
+    "name": "BePi",
+    "url": "https://www.bepi.tech",
+    "email": "root@bepi.tech"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bepi-tech/openbackups.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.4",
+    "electron-builder": "^22.11.7"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "custom-electron-titlebar": "^3.2.7",
+    "electron-store": "^8.0.0",
+    "electron-updater": "^4.3.9",
+    "node-cron": "^3.0.0",
+    "zip-a-folder": "^1.0.1"
+  }
+}

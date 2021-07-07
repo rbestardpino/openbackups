@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.33827143"
+     inkscape:cx="165.54753"
+     inkscape:cy="648.88719"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient12731"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5e35b1;stop-opacity:1;"
+         offset="0"
+         id="stop12729" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path2953" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g13283"
+       transform="translate(-208.05533,-22.489815)"
+       inkscape:export-filename="C:\Users\RodrigoBestardPino\projects\test-electron\assets\img\logofinal_.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264999"
+         id="path56"
+         sodipodi:type="arc"
+         sodipodi:cx="105.14251"
+         sodipodi:cy="150.14232"
+         sodipodi:rx="100"
+         sodipodi:ry="100"
+         sodipodi:start="0.78539816"
+         sodipodi:end="0"
+         sodipodi:arc-type="slice"
+         d="M 175.85319,220.853 A 100,100 0 0 1 49.585486,233.28928 100,100 0 0 1 12.754556,111.87398 100,100 0 0 1 124.65154,52.063791 100,100 0 0 1 205.14251,150.14232 h -100 z"
+         inkscape:export-filename="C:\Users\RodrigoBestardPino\projects\test-electron\assets\img\logofinal_.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <circle
+         style="fill:#5e35b1;fill-opacity:1;stroke:#000000;stroke-width:0.264999"
+         id="circle138"
+         cx="105.14251"
+         cy="150.14232"
+         r="90"
+         inkscape:export-filename="C:\Users\RodrigoBestardPino\projects\test-electron\assets\img\logofinal_.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <g
+         id="g8868"
+         transform="matrix(-1.1112069,1.0075809,-1.0075809,-1.1112069,507.92354,316.64566)"
+         style="stroke:#000000;stroke-opacity:1"
+         inkscape:export-filename="C:\Users\RodrigoBestardPino\projects\test-electron\assets\img\logofinal_.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart)"
+           d="M 97.117594,199.5451 Z"
+           id="path7589" />
+        <path
+           style="fill:#d1d9d6;fill-opacity:1;stroke:#000000;stroke-width:2.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart)"
+           d="M 97.585715,199.54686 Z"
+           id="path7704" />
+      </g>
+    </g>
+    <g
+       id="g13276"
+       inkscape:export-filename="C:\Users\RodrigoBestardPino\projects\test-electron\assets\img\logofinal_.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <ellipse
+         style="mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.882242;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path9496"
+         cx="-102.91782"
+         cy="162.84557"
+         rx="50.080158"
+         ry="9.2943878" />
+      <ellipse
+         style="mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.882242;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path9496-0"
+         cx="-102.91782"
+         cy="92.450912"
+         rx="50.080158"
+         ry="9.2943878" />
+      <ellipse
+         style="mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.882242;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path9496-7"
+         cx="-102.91782"
+         cy="127.64824"
+         rx="50.080158"
+         ry="9.2943878" />
+    </g>
+  </g>
+</svg>

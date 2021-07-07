@@ -1,0 +1,232 @@
+/* v VARIABLES v */
+:root {
+  --main-accent-color: #faa61a;
+  --body-background-color: #272536;
+  --body-text-color: #a3a0b5;
+  --navbar-background-color: #241c2f;
+  --navbar-text-color: #9e93ae;
+  --sidenav-background-color: var(--body-background-color);
+  --sidenav-text-color: var(--body-text-color);
+  --datepicker-text-color-main: var(--navbar-text-color);
+  --datepicker-text-color-accent: #cec9d6;
+  --scrollbar-background-color: var(--body-background-color);
+  --scrollbar-thumb-color: #181621;
+  --scrollbar-hover-color: var(--main-accent-color);
+  --error-color: #891435;
+  --success-color: #418e3f;
+}
+/* ^ VARIABLES ^ */
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+  user-select: none;
+}
+
+.add-fab {
+  background-color: var(--main-accent-color);
+}
+
+.add-fab i {
+  color: var(--body-background-color);
+}
+.add-fab:hover {
+  background-color: var(--navbar-background-color);
+}
+
+.add-fab:hover i {
+  color: var(--main-accent-color);
+}
+
+nav,
+#slide-out .user-view {
+  background-color: var(--navbar-background-color);
+}
+
+#slide-out {
+  background-color: var(--sidenav-background-color);
+}
+
+.btn-flat,
+#bkps a,
+#slide-out a,
+#slide-out i {
+  color: inherit;
+}
+
+.btn-submit-form:focus,
+.btn-submit-form {
+  background-color: var(--main-accent-color);
+  color: var(--navbar-background-color);
+}
+
+.btn-submit-form i {
+  color: var(--body-background-color);
+}
+.btn-submit-form:hover i {
+  color: var(--main-accent-color);
+}
+
+.btn-submit-form:hover {
+  background-color: var(--body-background-color);
+  color: var(--main-accent-color);
+}
+
+.tap-target {
+  background-color: var(--main-accent-color);
+  color: var(--body-background-color);
+}
+
+.tap-target-wave::before,
+.tap-target-wave::after {
+  background-color: var(--body-background-color);
+}
+
+#about-modal,
+#welcome-modal,
+#settings-modal,
+.add-form {
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+}
+
+#about-modal .modal-footer a .btn-flat,
+#welcome-modal .modal-footer a .btn-flat,
+#settings-modal .modal-footer a .btn-flat {
+  color: var(--navbar-text-color);
+}
+
+#about-modal .modal-footer,
+#welcome-modal .modal-footer,
+#settings-modal .modal-footer,
+.add-form .modal-footer {
+  background-color: var(--navbar-background-color);
+  color: var(--navbar-text-color);
+}
+
+/* v DATEPICKER v */
+.datepicker-calendar-container {
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+}
+
+.datepicker-modal {
+  background-color: var(--body-background-color);
+}
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+  color: var(--body-text-color);
+}
+
+.datepicker-controls .select-year input,
+.datepicker-controls .select-month input {
+  color: var(--body-text-color);
+}
+
+.datepicker-date-display {
+  background-color: var(--navbar-background-color);
+  color: var(--datepicker-text-color-accent);
+}
+
+.datepicker-date-display .year-text {
+  color: var(--datepicker-text-color-main);
+}
+
+.datepicker-table abbr {
+  color: var(--datepicker-text-color-main);
+}
+
+.datepicker-table td.is-today {
+  color: var(--main-accent-color);
+}
+
+.datepicker-table td.is-selected {
+  background-color: var(--main-accent-color);
+  color: var(--navbar-background-color);
+}
+
+.datepicker-day-button:focus {
+  background-color: transparent;
+}
+/* ^ DATEPICKER ^ */
+
+.toast-error {
+  background-color: #891435;
+}
+
+.toast-success {
+  background-color: #418e3f;
+}
+
+.divider {
+  background-color: var(--navbar-background-color);
+}
+
+#search:focus {
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+}
+
+[type='checkbox'].filled-in:checked + span:not(.lever):after,
+[type='radio']:checked + span:after {
+  background-color: var(--main-accent-color);
+  border: 2px solid var(--main-accent-color);
+}
+
+[type='checkbox'].filled-in:not(:checked) + span:not(.lever):after,
+[type='radio']:not(:checked) + span:before,
+[type='radio']:not(:checked) + span:after {
+  border: 2px solid var(--body-text-color);
+  color: var(--body-background-color);
+}
+
+.file-field .btn-small:hover {
+  background-color: var(--main-accent-color);
+  color: var(--body-background-color);
+}
+
+.file-path::placeholder {
+  color: inherit;
+}
+
+form label,
+.input-field .prefix,
+.input-field label,
+.input-field input,
+.input-field textarea {
+  color: var(--body-text-color);
+}
+
+.input-field .prefix.active,
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+  color: var(--main-accent-color) !important;
+}
+
+.file-path:focus,
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 1px solid var(--main-accent-color) !important;
+  box-shadow: 0 1px 0 0 var(--main-accent-color) !important;
+}
+
+/* v SCROLLBAR v */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover-color);
+}
+/* ^ SCROLLBAR ^ */

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+
+    <!-- ICONS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- MATERIALIZE -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/materialize/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <!-- OWN STYLES -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <title>Open Backups</title>
+  </head>
+  <body>
+    <!-- START NAVBAR -->
+    <div class="navbar-fixed z-depth-1">
+      <nav>
+        <div class="nav-wrapper">
+          <a
+            href="#"
+            data-target="slide-out"
+            class="sidenav-trigger show-on-large"
+            ><i class="material-icons" style="color: #9e93ae">menu</i></a
+          >
+          <form class="right">
+            <div class="input-field">
+              <input
+                id="search"
+                type="search"
+                oninput="searchBkp(this.value)"
+              />
+              <label class="label-icon" for="search"
+                ><i
+                  class="material-icons"
+                  id="search-icon"
+                  style="color: #9e93ae"
+                  >search</i
+                ></label
+              >
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- START SIDENAV -->
+    <ul id="slide-out" class="sidenav z-depth-3">
+      <li>
+        <div class="user-view">
+          <div class="row"></div>
+          <div class="center">
+            <img id="sidenav-logo" width="80" height="80" />
+          </div>
+        </div>
+      </li>
+      <li>
+        <a class="sidenav-close waves-effect" href="#!"
+          ><i class="material-icons">home</i>Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="sidenav-close waves-effect"
+          href="#!"
+          onclick="M.TapTarget.getInstance(document.getElementById('help-fd')).open()"
+          ><i class="material-icons">help</i>Help</a
+        >
+      </li>
+      <li>
+        <a class="sidenav-close waves-effect modal-trigger" href="#about-modal"
+          ><i class="material-icons">info</i>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="sidenav-close waves-effect modal-trigger"
+          href="#settings-modal"
+          ><i class="material-icons">settings</i>Settings</a
+        >
+      </li>
+    </ul>
+    <!-- END SIDENAV -->
+
+    <!-- START HELP TAP TARGET -->
+    <div id="help-fd" class="tap-target z-depth-2" data-target="add-bkp-fab">
+      <div class="tap-target-content">
+        <h5>Add backup configuration</h5>
+        <p>
+          This is the main add button. Click this and you will be able to create
+          backup configurations. They can be normal or advanced.
+        </p>
+      </div>
+    </div>
+    <!-- END HELP TAP TARGET -->
+
+    <!-- START ABOUT MODAL -->
+    <div id="about-modal" class="modal modal-fixed-footer z-depth-2">
+      <div class="modal-content">
+        <h3>About</h3>
+        <div class="row">
+          Open Backups is an open-source lightweight desktop application made by
+          BePi. It allows you to easily manage automatic and recurrent backups
+          for all your files.
+        </div>
+        <div class="row"><strong>Open Backups</strong></div>
+        <div class="row">
+          <strong>Version</strong>: <span id="app-version"></span>
+        </div>
+        <div class="row">
+          <strong>App location</strong>: <span id="app-location"></span>
+        </div>
+        <div class="row">
+          <strong>User data location</strong>:
+          <span id="user-data-location"></span>
+        </div>
+        <div class="row">
+          <strong>Locale</strong>: <span id="locale"></span>
+        </div>
+        <div class="row">
+          <a
+            href="https://github.com/bepi-tech/openbackups/issues"
+            class="external-url waves-effect btn-flat col s6 m4 l4"
+            ><i class="material-icons left">bug_report</i>Bug report</a
+          >
+          <a
+            href="https://github.com/bepi-tech/openbackups/blob/main/CONTRIBUTING.md"
+            class="external-url waves-effect btn-flat col s6 m4 l4"
+            ><i class="material-icons left">people_outline</i>Contributing</a
+          >
+          <a
+            href="https://bepi.tech"
+            class="external-url waves-effect btn-flat col s6 m4 l4"
+            ><i class="material-icons left">attach_money</i>Support us</a
+          >
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat"
+          ><i class="material-icons">check</i></a
+        >
+      </div>
+    </div>
+    <!-- END ABOUT MODAL -->
+
+    <!-- START SETTINGS MODAL -->
+    <div id="settings-modal" class="modal modal-fixed-footer z-depth-2">
+      <div class="modal-content">
+        <div class="row">
+          <form>
+            <div class="input-field">
+              <i class="material-icons prefix" style="color: #9e93ae">search</i>
+              <input
+                id="search"
+                type="text"
+                oninput="searchSettings(this.value)"
+              />
+              <label for="search">Search settings</label>
+            </div>
+          </form>
+        </div>
+        <div id="settings-modal-form"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn btn-submit-form"
+          ><i class="material-icons">check</i></a
+        >
+      </div>
+    </div>
+    <!-- END SETTINGS MODAL -->
+
+    <!-- START WELCOME MODAL -->
+    <div id="welcome-modal" class="modal z-depth-2">
+      <div class="modal-content">
+        <h4 class="center">Thank you for installing Open Backups!</h4>
+        <div class="row">
+          <a
+            href="https://github.com/bepi-tech/openbackups/issues"
+            class="external-url waves-effect btn-flat col s6 m4 l4"
+            ><i class="material-icons left">bug_report</i>Bug report</a
+          >
+          <a
+            href="https://github.com/bepi-tech/openbackups/blob/main/CONTRIBUTING.md"
+            class="external-url waves-effect btn-flat col s6 m4 l4"
+            ><i class="material-icons left">people_outline</i>Contributing</a
+          >
+          <a
+            href="https://bepi.tech"
+            class="external-url waves-effect btn-flat col s6 m4 l4"
+            ><i class="material-icons left">attach_money</i>Support us</a
+          >
+        </div>
+        <div class="row">
+          Click the button below to watch a mini tutorial on how to use the app.
+          You can watch it later by clicking the "Help" section in the side
+          menu.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="#!"
+          class="modal-close waves-effect btn btn-submit-form right"
+          onclick="M.TapTarget.getInstance(document.getElementById('help-fd')).open()"
+          >Quick Tutorial</a
+        >
+        <a href="#!" class="modal-close waves-effect btn-flat right"
+          >Maybe later</a
+        >
+      </div>
+    </div>
+    <!-- END WELCOME MODAL -->
+
+    <div class="container">
+      <div class="row" id="bkps"></div>
+    </div>
+
+    <!-- START HOME FAB -->
+    <div class="fixed-action-btn">
+      <a
+        id="add-bkp-fab"
+        class="btn-floating btn-large waves-effect waves add-fab"
+        onclick="this.classList.remove('pulse')"
+      >
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li>
+          <a
+            class="btn-floating waves-effect waves modal-trigger add-fab"
+            title="Add advanced backup configuration"
+            href="#add-advanced-bkp-modal"
+            ><i class="material-icons">add_to_queue</i></a
+          >
+        </li>
+        <li>
+          <a
+            class="btn-floating waves-effect waves modal-trigger add-fab"
+            title="Add backup configuration"
+            href="#add-bkp-modal"
+            ><i class="material-icons">add</i></a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- END HOME FAB -->
+
+    <!-- START ADD ADVANCED BKP MODAL -->
+    <div
+      id="add-advanced-bkp-modal"
+      class="modal modal-fixed-footer z-depth-2 add-form"
+    >
+      <div class="modal-content">
+        <h3>ADVANCED BACKUP CONFIGURATION</h3>
+        <form id="add-advanced-bkp-form">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">info</i>
+              <input id="name" type="text" /> <label for="name">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">description</i>
+              <textarea
+                id="description"
+                class="materialize-textarea"
+              ></textarea>
+              <label for="description">Description</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">timer</i>
+              <input id="cron" type="text" /> <label for="cron">Cron</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="file-field input-field col s12">
+              <div class="btn-small btn-flat">
+                <i class="material-icons">file_upload</i>
+                <input id="dir" type="file" webkitdirectory="true" />
+              </div>
+              <div class="file-path-wrapper">
+                <input
+                  id="dir-label"
+                  class="file-path"
+                  type="text"
+                  placeholder="Select the folder to backup"
+                  onchange="
+                    const file =  document.getElementById('dir').files[0]
+                    if (!file) return
+                    const dirname = file.webkitRelativePath.split('/')[0]
+                    const dirpath = file.path.split(dirname)[0] + dirname
+                    this.value = dirpath"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="#!"
+          class="waves-effect btn btn-submit-form right"
+          onclick="submitForm('advanced')"
+          ><i class="material-icons">check</i></a
+        >
+        <a href="#!" class="modal-close waves-effect btn-flat right"
+          ><i class="material-icons" style="color: #9e93ae">close</i></a
+        >
+      </div>
+    </div>
+    <!-- END ADD ADVANCED BKP MODAL -->
+
+    <!-- START ADD BKP MODAL -->
+    <!-- TODO: multipage form -->
+    <div id="add-bkp-modal" class="modal modal-fixed-footer z-depth-2 add-form">
+      <div class="modal-content">
+        <h3>WORK IN PROGRESS</h3>
+        <p>Sorry 😢</p>
+        <!-- <h3>BACKUP CONFIGURATION</h3>
+        <p id="add-bkp-step-desc"></p>
+        <form id="add-bkp-form">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">date_range</i>
+              <input id="date" type="text" class="datepicker" />
+              <label for="date">Starting date</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">timer</i>
+              <input id="time" type="text" class="timepicker" />
+              <label for="time">Starting time</label>
+            </div>
+          </div>
+        </form> -->
+      </div>
+      <!-- <div class="modal-footer">
+        <a
+          id="add-bkp-form-previous-step"
+          onclick="prev()"
+          class="waves-effect btn-flat left"
+          ><i class="material-icons" style="color: #9e93ae">chevron_left</i></a
+        >
+        <a
+          id="add-bkp-form-next-step"
+          onclick="next()"
+          class="waves-effect btn-flat left"
+          ><i class="material-icons" style="color: #9e93ae">chevron_right</i></a
+        >
+        <a
+          href="#!"
+          class="modal-close waves-effect btn-flat right disabled"
+          onclick="submitForm('advanced')"
+          ><i class="material-icons" style="color: #faa61a">check</i></a
+        >
+        <a href="#!" class="modal-close waves-effect btn-flat right"
+          ><i class="material-icons" style="color: #9e93ae">close</i></a
+        >
+      </div> -->
+    </div>
+    <!-- END ADD BKP MODAL -->
+
+    <!-- MATERIALIZE -->
+    <script
+      type="text/javascript"
+      src="assets/materialize/js/materialize.min.js"
+    ></script>
+    <!-- SORTABLE -->
+    <script src="assets/sortable/Sortable.min.js"></script>
+    <!-- OWN SCRIPTs -->
+    <script src="js/index.js"></script>
+    <script src="js/settings.js"></script>
+  </body>
+</html>

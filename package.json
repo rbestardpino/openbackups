@@ -1,6 +1,6 @@
 {
   "name": "openbackups",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open Backups is an open-source lightweight desktop application made by BePi. It allows you to easily manage automatic and recurrent backups for all your files.",
   "main": "src/main.js",
   "scripts": {

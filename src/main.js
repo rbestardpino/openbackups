@@ -7,6 +7,8 @@ const configStore = require('./utils/store/config')
 const tasks = require('./utils/tasks')
 const { autoUpdater } = require('electron-updater')
 
+const dev = !app.isPackaged
+
 let top = {}
 
 const lock = app.requestSingleInstanceLock()
@@ -95,6 +97,7 @@ function initializeWindow() {
   top.win = createWindow(path.join(__dirname, 'public', 'index.html'), {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      devTools: dev,
     },
   })
 

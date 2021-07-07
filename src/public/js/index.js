@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // TODO: custom order need to stay when restarting the app
   sortable = new Sortable(document.getElementById('bkps'), {
     handle: '.handle',
-    animation: 600,
+    animation: 600, // TODO: Make this a setting, new scope: preferences
   })
 
   // APP ATTRIBUTES AND OTHERS

@@ -45,7 +45,7 @@ contextBridge.exposeInMainWorld('api', {
     path: app.getAppPath(),
     userDataPath: app.getPath('userData'),
     locale: app.getLocale(),
-    icon: path.join(__dirname, 'public', 'assets', 'img', 'logo.png'),
+    icon: path.join(__dirname, 'public', 'assets', 'img', 'icon.png'),
     firstTime: firstTime(),
   },
   cron: {

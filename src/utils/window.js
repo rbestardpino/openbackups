@@ -10,7 +10,7 @@ const defaultOptions = {
   minHeight: 200,
   center: true,
   frame: false,
-  icon: path.join(__dirname, '..', 'public', 'assets', 'img', 'logo.png'),
+  icon: path.join(__dirname, '..', 'public', 'assets', 'img', 'icon.png'),
   title: 'Open Backups',
   webPreferences: {
     contextIsolation: true,

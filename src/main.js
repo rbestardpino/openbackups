@@ -114,7 +114,7 @@ function initializeWindow() {
 
 function initializeTray() {
   top.tray = new Tray(
-    path.join(__dirname, 'public', 'assets', 'img', 'logo.png')
+    path.join(__dirname, 'public', 'assets', 'img', 'icon.png')
   )
 
   top.tray.setContextMenu(
@@ -167,7 +167,7 @@ function showNotification(bkp) {
   const notif = new Notification({
     title: `Backup '${bkp.name}' made succesfully`,
     body: `Time taken: ${bkp.time} seconds`,
-    icon: path.join(__dirname, 'public', 'assets', 'img', 'logo.png'),
+    icon: path.join(__dirname, 'public', 'assets', 'img', 'icon.png'),
   })
   notif.show()
 

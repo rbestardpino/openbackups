@@ -154,11 +154,11 @@ nav,
 /* ^ DATEPICKER ^ */
 
 .toast-error {
-  background-color: #891435;
+  background-color: var(--error-color);
 }
 
 .toast-success {
-  background-color: #418e3f;
+  background-color: var(--success-color);
 }
 
 .divider {
